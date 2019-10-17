@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/view_trip_margin"
+    android:layout_marginTop="@dimen/view_trip_margin"
+    android:layout_marginRight="@dimen/view_trip_margin"
+    tools:context=".ViewTripActivity">
+
+
+    <ImageView
+        android:id="@+id/trip_image_viewTrip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:maxHeight="@dimen/view_trip_image_max_height"
+        android:src="@drawable/imagepreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[12]" />
+
+    <TextView
+        android:id="@+id/trip_location_viewTrip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#99000000"
+        android:gravity="clip_horizontal|center|clip_vertical"
+        android:padding="8dp"
+        android:text="Locatie"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/trip_title_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/trip_image_viewTrip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/trip_name_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Name"
+        android:textSize="@dimen/trip_name_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_location_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_type_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Type"
+        android:textSize="@dimen/trip_type_size"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_location_viewTrip" />
+
+    <RatingBar
+        android:id="@+id/trip_rating_viewTrip"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/view_trip_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/view_trip_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrow_vieTrip" />
+
+    <TextView
+        android:id="@+id/trip_start_date_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="22/09/90"
+        android:textSize="@dimen/start_date_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/arrow_vieTrip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trip_name_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_end_date_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="22/09/92"
+        android:textSize="@dimen/end_date_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/arrow_vieTrip"
+        app:layout_constraintTop_toBottomOf="@+id/trip_name_viewTrip" />
+
+    <TextView
+        android:id="@+id/trip_price_viewTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#99000000"
+        android:padding="8dp"
+        android:text="500 $"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow_vieTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/trip_start_date_viewTrip"
+        app:layout_constraintEnd_toStartOf="@+id/trip_end_date_viewTrip"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/trip_start_date_viewTrip"
+        app:layout_constraintTop_toTopOf="@+id/trip_start_date_viewTrip"
+        app:srcCompat="@drawable/ic_arrow_forward" />
+
+</android.support.constraint.ConstraintLayout>
